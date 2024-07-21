@@ -61,6 +61,12 @@
     <Compile Include="Models\Finger.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IFaceRepo.cs" />
+    <Compile Include="Repository\IFingerRepo.cs" />
+    <Compile Include="Repository\IUserRepo.cs" />
+    <Compile Include="Services\FaceRepo.cs" />
+    <Compile Include="Services\FingerRepo.cs" />
+    <Compile Include="Services\UserRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
