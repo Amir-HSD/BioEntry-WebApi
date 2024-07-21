@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioEntry-WebApi", "BioEntry-WebApi\BioEntry-WebApi.csproj", "{63A6E14B-D230-498E-B1F6-B375DE3B7C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{3B9499BB-5506-4516-B761-204ECE5FE81D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0750731-0A2F-4D25-809B-3E65A4BC02CD}
+	EndGlobalSection
+EndGlobal
