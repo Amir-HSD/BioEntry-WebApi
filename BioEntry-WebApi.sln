@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioEntry-WebApi", "BioEntry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{3B9499BB-5506-4516-B761-204ECE5FE81D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition", "FaceRecognition\FaceRecognition.csproj", "{4961C840-370C-463B-A6E1-C6536D399065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4961C840-370C-463B-A6E1-C6536D399065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4961C840-370C-463B-A6E1-C6536D399065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4961C840-370C-463B-A6E1-C6536D399065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4961C840-370C-463B-A6E1-C6536D399065}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

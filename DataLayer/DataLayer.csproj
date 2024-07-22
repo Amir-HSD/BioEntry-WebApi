@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202407211020010_init.designer.cs">
       <DependentUpon>202407211020010_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407211850508_change-face-model.cs" />
+    <Compile Include="Migrations\202407211850508_change-face-model.designer.cs">
+      <DependentUpon>202407211850508_change-face-model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Face.cs" />
     <Compile Include="Models\Finger.cs" />
@@ -75,6 +79,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407211020010_init.resx">
       <DependentUpon>202407211020010_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407211850508_change-face-model.resx">
+      <DependentUpon>202407211850508_change-face-model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

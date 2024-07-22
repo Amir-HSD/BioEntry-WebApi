@@ -74,7 +74,7 @@ namespace DataLayer
         {
             try
             {
-                Face face = _db.Faces.Where(f=f=>f.Id == id).FirstOrDefault();
+                Face face = _db.Faces.Where(f=>f.Id == id).FirstOrDefault();
                 _db.Entry(face).State = EntityState.Deleted;
                 return true;
             }

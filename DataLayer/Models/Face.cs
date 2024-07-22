@@ -15,6 +15,10 @@ namespace DataLayer
 
         public string Img { get; set; }
 
+        public int Height { get; set; }
+
+        public int Width { get; set; }
+
         public int UserId { get; set; }
 
         public virtual User User { get; set; }
