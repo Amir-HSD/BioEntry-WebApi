@@ -19,5 +19,9 @@ namespace DataLayer
         bool DeleteFace(Face face);
 
         bool DeleteFaceById(int id);
+
+        void SaveChange();
+
+        void Dispose();
     }
 }

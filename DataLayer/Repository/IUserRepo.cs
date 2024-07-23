@@ -20,5 +20,9 @@ namespace DataLayer
 
         bool DeleteUserById(int id);
 
+        void SaveChange();
+
+        void Dispose();
+
     }
 }

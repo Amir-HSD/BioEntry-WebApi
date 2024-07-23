@@ -19,5 +19,9 @@ namespace DataLayer
         bool DeleteFinger(Finger finger);
 
         bool DeleteFingerById(int id);
+
+        void SaveChange();
+
+        void Dispose();
     }
 }

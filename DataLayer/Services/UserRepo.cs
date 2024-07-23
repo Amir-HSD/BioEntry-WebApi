@@ -83,5 +83,15 @@ namespace DataLayer
                 throw;
             }
         }
+
+        public void SaveChange()
+        {
+            _db.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            _db.Dispose();
+        }
     }
 }

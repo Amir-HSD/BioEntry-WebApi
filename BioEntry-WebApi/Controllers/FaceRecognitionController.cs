@@ -22,7 +22,7 @@ namespace BioEntry_WebApi.Controllers
             UserRepo = new UserRepo(ctx);
         }
 
-        public async Task<IHttpActionResult> Post([FromBody]string Img)
+        public async Task<IHttpActionResult> Get([FromBody]string Img)
         {
             CompareFace compareFace = new CompareFace();
             var result = await compareFace.Compare(Img, FaceRepo.GetAllFace().ToList());
