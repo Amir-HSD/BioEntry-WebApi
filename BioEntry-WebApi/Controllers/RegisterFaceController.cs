@@ -34,10 +34,5 @@ namespace BioEntry_WebApi.Controllers
             }
             
         }
-
-        public void Dispose()
-        {
-            FaceRepo.Dispose();
-        }
     }
 }

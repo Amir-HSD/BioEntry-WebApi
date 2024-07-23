@@ -41,9 +41,5 @@ namespace BioEntry_WebApi.Controllers
                 return Json(new { status = "Error!" });
             }
         }
-        public void Dispose()
-        {
-            UserRepo.Dispose();
-        }
     }
 }
