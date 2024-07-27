@@ -7,26 +7,40 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioEntry-WebApi", "BioEntry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{3B9499BB-5506-4516-B761-204ECE5FE81D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceRecognition", "FaceRecognition\FaceRecognition.csproj", "{4961C840-370C-463B-A6E1-C6536D399065}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceComparator", "FaceComparator\FaceComparator.csproj", "{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Debug|x64.Build.0 = Debug|Any CPU
 		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|x64.ActiveCfg = Release|Any CPU
+		{63A6E14B-D230-498E-B1F6-B375DE3B7C67}.Release|x64.Build.0 = Release|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Debug|x64.Build.0 = Debug|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4961C840-370C-463B-A6E1-C6536D399065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4961C840-370C-463B-A6E1-C6536D399065}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4961C840-370C-463B-A6E1-C6536D399065}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4961C840-370C-463B-A6E1-C6536D399065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|x64.ActiveCfg = Release|Any CPU
+		{3B9499BB-5506-4516-B761-204ECE5FE81D}.Release|x64.Build.0 = Release|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Debug|x64.Build.0 = Debug|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Release|x64.ActiveCfg = Release|Any CPU
+		{D839F365-D15A-42F6-BE0C-F5F4B0FF1452}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

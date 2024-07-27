@@ -1,11 +1,8 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Emgu.CV;
-using Emgu.CV.CvEnum;
 using Emgu.CV.Face;
 using Emgu.CV.Structure;
 using System.Drawing;
@@ -14,22 +11,29 @@ using Emgu.CV.Util;
 
 namespace FaceRecognition
 {
-    public class CompareFace
+    public static class CompareFace
     {
-        private readonly CascadeClassifier _faceCascade;
-        private readonly LBPHFaceRecognizer _faceRecognizer;
+        //private static readonly CascadeClassifier _faceCascade = new CascadeClassifier("haarcascade_frontalface_default.xml");
+        //private static readonly LBPHFaceRecognizer _faceRecognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);
 
-        public CompareFace()
-        {
-            _faceCascade = new CascadeClassifier("haarcascade_frontalface_default.xml");
-            _faceRecognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);
-        }
+        //public CompareFace()
+        //{
+        //    _faceCascade = new CascadeClassifier("haarcascade_frontalface_default.xml");
+        //    _faceRecognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);
+        //}
 
-        public async Task<int> Compare(string Face1, List<Face> Faces)
+        public static async Task<string> Compare(string Face1, List<Face> Faces)
         {
-            
+            //CascadeClassifier _faceCascade = new CascadeClassifier("/Users/Lion/source/repos/BioEntry-WebApi/FaceRecognition/haarcascade_frontalface_default.xml");
+            LBPHFaceRecognizer _faceRecognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);
+            //EigenFaceRecognizer _faceRecognizer = new EigenFaceRecognizer();
+            if (Faces.Count == 0 || Faces == null)
+            {
+                return "-1";
+            }   
             byte[] Face1byte = Convert.FromBase64String(Face1);
             string Face1FileName = Guid.NewGuid().ToString();
+            string Face2FileName;
             try
             {
                 Image.FromStream(new MemoryStream(Face1byte)).Save(Face1FileName);
@@ -41,7 +45,7 @@ namespace FaceRecognition
                 foreach (var Face in Faces)
                 {
                     byte[] Face2byte = Convert.FromBase64String(Face.Img);
-                    string Face2FileName = Guid.NewGuid().ToString();
+                    Face2FileName = Guid.NewGuid().ToString();
                     Image.FromStream(new MemoryStream(Face2byte)).Save(Face2FileName);
                     var ImageFace2 = new Image<Gray, byte>(Face2FileName);
 
@@ -63,17 +67,27 @@ namespace FaceRecognition
 
                     if (result.Label == 1 && result.Distance < 50)
                     {
-                        return Face.User.Id;
+                        File.Delete(Face2FileName);
+                        return Face.User.Id.ToString();
+                    }
+                    else
+                    {
+                        File.Delete(Face2FileName);
                     }
 
                 }
 
-                return -1;
+                return "-1";
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return -2;
+                return e.ToString();
+            }
+            finally
+            {
+                File.Delete(Face1FileName);
+                _faceRecognizer.Dispose();
             }
         }
     }
