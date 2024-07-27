@@ -24,12 +24,13 @@ namespace BioEntry_WebApi.Controllers
         // به زودی با Asp.net core ورژن جدید رو میزنم
         // توسعه دهنده Amir.HSD
 
-        BioEntryContext ctx = new BioEntryContext();
+        BioEntryContext ctx;
         IFaceRepo FaceRepo;
         IUserRepo UserRepo;
 
         public FaceRecognitionController()
         {
+            ctx = new BioEntryContext();
             FaceRepo = new FaceRepo(ctx);
             UserRepo = new UserRepo(ctx);
         }

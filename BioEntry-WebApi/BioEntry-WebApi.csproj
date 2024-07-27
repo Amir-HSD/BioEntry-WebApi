@@ -180,6 +180,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\FaceRecognitionController.cs" />
+    <Compile Include="Controllers\FingerRecognitionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterFaceController.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
