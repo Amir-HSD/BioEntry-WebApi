@@ -86,7 +86,8 @@ namespace BioEntry_WebApi.Controllers
             Process process = Process.Start(startInfo);
             process.WaitForExit();
             string ss = "";
-            foreach (var item in await process.StandardOutput.ReadLineAsync())
+            var ReadCmd = await process.StandardOutput.ReadLineAsync();
+            foreach (var item in ReadCmd)
             {
                 ss += item.ToString();
             }

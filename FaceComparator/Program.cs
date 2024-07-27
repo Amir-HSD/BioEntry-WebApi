@@ -19,10 +19,10 @@ namespace FaceComparator
 			BioEntryContext ctx = new BioEntryContext();
             IFaceRepo repo = new FaceRepo(ctx);
             LBPHFaceRecognizer _faceRecognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);
+            bool Detected = false;
 
             try
 			{
-
                 if (!File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FaceComparator")))
                 {
                     Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FaceComparator"));
@@ -63,6 +63,7 @@ namespace FaceComparator
                         if (result.Label == 1 && result.Distance < 50)
                         {
                             File.Delete(Face2FileName);
+                            Detected =true;
                             Console.WriteLine(Face.User.Id.ToString());
                         }
                         else
@@ -79,6 +80,10 @@ namespace FaceComparator
                 }
                 finally
                 {
+                    if (!Detected)
+                    {
+                        Console.WriteLine(-1);
+                    }
                     File.Delete(Face1FileName);
                     _faceRecognizer.Dispose();
                 }
@@ -88,7 +93,7 @@ namespace FaceComparator
 			catch (Exception e)
 			{
                 Console.WriteLine(e.ToString());
-			}
+            }
 			finally
 			{
 				ctx.Dispose();
