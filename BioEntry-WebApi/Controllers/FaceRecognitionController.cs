@@ -46,7 +46,7 @@ namespace BioEntry_WebApi.Controllers
                     Img = item.Img,
                 });
             }
-            return Json(Faces);
+            return Json(new { Faces = Faces });
         }
 
         [Route("api/FaceRecognition/{FaceId}")]
