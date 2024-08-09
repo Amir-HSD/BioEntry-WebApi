@@ -183,6 +183,7 @@
     <Compile Include="Controllers\FingerRecognitionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterFaceController.cs" />
+    <Compile Include="Controllers\RegisterFingerController.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -78,6 +78,7 @@
     <Compile Include="Services\UserRepo.cs" />
     <Compile Include="ViewModel\FaceRecognitionViewModel.cs" />
     <Compile Include="ViewModel\FaceViewModel.cs" />
+    <Compile Include="ViewModel\RegisterFingerViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

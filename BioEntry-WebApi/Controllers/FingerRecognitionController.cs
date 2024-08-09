@@ -20,10 +20,11 @@ namespace BioEntry_WebApi.Controllers
             FingerRepo = new FingerRepo(ctx);
             UserRepo = new UserRepo(ctx);
         }
-
-        public async Task<IHttpActionResult> Get([FromBody] int FingerId)
+        [Route("api/FingerRecognition/{FingerId}")]
+        public async Task<IHttpActionResult> Get(int FingerId)
         {
             var Result = FingerRepo.GetFingerById(FingerId);
+            var User = UserRepo.GetUserById(Result.UserId);
             if (Result == null)
             {
                 return Json(new
@@ -31,7 +32,7 @@ namespace BioEntry_WebApi.Controllers
                     status = "Finger Not Found!"
                 });
             }
-            return Json(new { status = "Finger Successfully Founded", FingerId = Result.FingerId, UserId = Result.UserId, Name = Result.User.Name, Family = Result.User.Family });
+            return Json(new { status = "Finger Successfully Founded", FingerId = Result.FingerId, UserId = Result.UserId, Name = User.Name, Family = User.Family });
         }
 
     }

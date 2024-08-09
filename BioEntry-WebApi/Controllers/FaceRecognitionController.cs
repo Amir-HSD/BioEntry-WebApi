@@ -52,7 +52,8 @@ namespace BioEntry_WebApi.Controllers
         [Route("api/FaceRecognition/{FaceId}")]
         public async Task<IHttpActionResult> Get(int FaceId)
         {
-            var User = UserRepo.GetUserById(FaceId);
+            var Face = FaceRepo.GetFaceById(FaceId);
+            var User = UserRepo.GetUserById(Face.UserId);
             if (User == null)
             {
                 return Json(new { status = "Not Found" });

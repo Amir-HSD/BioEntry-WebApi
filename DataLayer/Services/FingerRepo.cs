@@ -25,7 +25,7 @@ namespace DataLayer
 
         public Finger GetFingerById(int id)
         {
-            return _db.Fingers.FirstOrDefault(f=>f.Id == id);
+            return _db.Fingers.FirstOrDefault(f=>f.FingerId == id);
         }
 
         public bool AddFinger(Finger finger)
